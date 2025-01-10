@@ -9,6 +9,3 @@
  	odhcp6c \
  	odhcpd-ipv6only \
  	ppp \
-@@ -404,4 +402,4 @@ ifeq ($(TARGET_BUILD),1)
-   BuildTarget?=$(BuildKernel)
- endif
