@@ -19,6 +19,8 @@ rm -rf package/feeds/packages/ovpn-dco package/feeds/packages/xr_usb_serial_comm
 
 rm -rf package/libs/libnftnl/patches/001-libnftnl-add-fullcone-expression-support.patch package/network/config/firewall4/patches/001-firewall4-Add-fullcone-support.patch
 
+sed -i "/nss_packages/d" feeds.conf.default
+
 sed -i 's/DEFAULT_PACKAGES +=/DEFAULT_PACKAGES += kmod-qca-mcs kmod-qca-nss-drv-igs kmod-qca-nss-drv-l2tpv2 kmod-qca-nss-drv-lag-mgr kmod-qca-nss-drv-map-t kmod-qca-nss-drv-pppoe kmod-qca-nss-drv-pptp kmod-qca-nss-drv-qdisc kmod-qca-nss-macsec/' target/linux/qualcommax/Makefile
 
 sed -i "s/LiBwrt/Kwrt/Ig" package/base-files/files/bin/config_generate package/base-files/image-config.in package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc config/Config-images.in Config.in include/u-boot.mk include/version.mk || true
