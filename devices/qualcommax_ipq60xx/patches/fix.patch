@@ -10,8 +10,8 @@
    $(call AddDepends/crypto)
  endef
 
---- a/package/feeds/kiddin9/nss-packages/qca-nss-ecm/Makefile
-+++ b/package/feeds/kiddin9/nss-packages/qca-nss-ecm/Makefile
+--- a/package/feeds/kiddin9/qca-nss-ecm/Makefile
++++ b/package/feeds/kiddin9/qca-nss-ecm/Makefile
 @@ -119,10 +119,6 @@ ifneq ($(CONFIG_PACKAGE_kmod-nat46),)
  ECM_MAKE_OPTS+=ECM_INTERFACE_MAP_T_ENABLE=y
  endif
@@ -24,8 +24,8 @@
  ECM_MAKE_OPTS+=ECM_INTERFACE_PPPOE_ENABLE=y \
  			   ECM_INTERFACE_PPTP_ENABLE=y \
 
---- a/package/feeds/kiddin9/nss-packages/qca-nss-drv/Makefile
-+++ b/package/feeds/kiddin9/nss-packages/qca-nss-drv/Makefile
+--- a/package/feeds/kiddin9/qca-nss-drv/Makefile
++++ b/package/feeds/kiddin9/qca-nss-drv/Makefile
 @@ -186,10 +186,8 @@ ifndef CONFIG_NSS_DRV_IGS_ENABLE
  endif
  

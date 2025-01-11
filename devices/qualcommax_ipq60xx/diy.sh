@@ -11,7 +11,9 @@ wget -N https://raw.githubusercontent.com/openwrt/openwrt/refs/heads/openwrt-24.
 wget -N https://raw.githubusercontent.com/openwrt/openwrt/refs/heads/openwrt-24.10/package/base-files/files/sbin/sysupgrade -P package/base-files/files/sbin/
 wget -N https://github.com/openwrt/openwrt/raw/refs/heads/openwrt-24.10/package/network/config/firewall/Makefile -P package/network/config/firewall/
 
-git clone https://github.com/LiBwrt/nss-packages package/feeds/kiddin9/nss-packages
+git clone https://github.com/LiBwrt/nss-packages nss-packages
+
+mv -f nss-packages/* package/feeds/kiddin9/
 
 rm -rf feeds/kiddin9/shortcut-fe feeds/kiddin9/fibocom_QMI_WWAN feeds/kiddin9/quectel_QMI_WWAN feeds/kiddin9/xtables-wgobfs feeds/kiddin9/fullconenat-nft/
 
